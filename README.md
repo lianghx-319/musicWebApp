@@ -31,6 +31,12 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 - Sass
 - axios
 - vue2-touch
+- 初尝yarn包管理
+
+## 运行截图：
+<div align="space-between">
+  <img src="https://github.com/lianghx-319/musicWebApp/blob/master/static/gif/music.gif" width="375" height="667">
+</div>
 
 ## 项目组件
 - [x] 首页 -- 完成
