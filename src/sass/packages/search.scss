@@ -1,0 +1,54 @@
+.searchPage{
+	.searchNav{
+		display: flex;
+		.searchBar{
+			flex:8;
+			height: 30px;
+			background: $gray-bgc;
+			// border: 2px solid $white-base;
+			border-radius: 30px;
+			text-align: center;
+			color: $gray-light;
+			display:inline-block;
+				.icon{
+					// width: 24px;
+					font-size: 13px;
+					line-height:30px;
+					display: inline-flex;
+					justify-content: center;
+				}
+				.icon-sousuoshanchu{
+					float: right;
+					padding-right: 10px;
+				}
+				input{
+					padding:0;
+					width: 50%;
+					color: $gray-light;
+					caret-color:$white-base;
+					background: $gray-bgc;
+					border:none;
+					outline:none;
+					transition: width .3 ease;
+					// border: 2px solid $white-base;
+					height:29px;
+					// line-height: 30px;
+					&::-webkit-input-placeholder {
+					    color:    $gray-light;
+					}
+					&:focus{
+						width:78%;
+					}
+				}
+		}
+		span{
+			// display: none;
+			padding:0 5px;
+			flex:initial;
+			min-width: 28px;
+			// float: right;
+			line-height: 30px;
+			// width: 50px;
+		}
+	}
+}

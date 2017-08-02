@@ -1,0 +1,40 @@
+// .mint-navbar {
+// 	.mint-tab-item {
+// 		background-image: linear-gradient(180deg, #eae7e7, #eae7e7 50%, transparent 50%);
+// 		background-size: 100% 1px;
+// 	    background-repeat: no-repeat;
+// 	    background-position: bottom;
+// 		.mint-tab-item-label {
+// 			font-size: 16px;
+// 		}
+// 		&.is-selected {
+// 			margin-bottom: 0;
+// 			border-bottom-color: $primary-color;
+// 			color: $primary-color;
+// 		}
+// 	}
+// }
+//
+// .mint-tab-container {
+// 	background-color: $white-base;
+// 	height: 1000px;
+// 	overflow: auto;
+// 	-webkit-overflow-scrolling: touch;
+// 	.mint-tab-container-wrap {
+// 		display: block;
+// 	}
+// }
+//底部navbar样式更改
+.mu-bottom-nav-shift{
+	background-color: $gray-drak!important;
+	.mu-bottom-item-active{
+		.mu-bottom-item-text,
+		.mu-bottom-item-icon{
+			color: $red-drak!important;
+		}
+	}
+}
+
+// a.router-link-active{
+// 	color: $red-drak!important;
+// }
