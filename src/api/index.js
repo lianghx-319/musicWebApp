@@ -1,4 +1,4 @@
-const _baseUrl = 'http://192.168.1.132:3000';
+const _baseUrl = 'http://localhost:3000';
 import axios from 'axios'
 
 export default{
