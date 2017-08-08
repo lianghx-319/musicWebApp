@@ -6,7 +6,7 @@
 
 注意事项
 需要配合后台api一起运行才能显示完整效果
-[项目地址](https://github.com/Binaryify/NeteaseCloudMusicApi0)
+[项目地址](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
 由于依赖包中有node-sass，需要Python环境才能正常install
 
