@@ -4,21 +4,15 @@
 
 ## Build Setup
 
-``` bash
-# install dependencies
+注意事项
+需要配合后台api一起运行才能显示完整效果
+[项目地址](https://github.com/Binaryify/NeteaseCloudMusicApi0)
+
+由于依赖包中有node-sass，需要Python环境才能正常install
+
 npm install
 
-# serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## 简介
 自学了半年的前端知识，希望能做个小demo当作面试的作品。平常喜欢音乐所以就着手实现这个作品。虽然GitHub上已经有许多仿写的项目，但我希望写一个简易版的网易云音乐，主要播放的功能齐全和自己定制的ui风格。
