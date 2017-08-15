@@ -42,4 +42,5 @@ export default{
 export function login(phone,password){
   let url = _baseUrl + '/login/cellphone?phone=' + phone + '&password=' + password;
   return axios.get(url);
+
 }

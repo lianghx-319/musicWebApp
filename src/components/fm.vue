@@ -10,7 +10,8 @@
         </mu-icon-button>
         <div class="title">
           <div class="songName" ref="songName">
-            <span ref="rollName">{{this.songName}}</span>
+            <span ref="rollName">{{this.songMsg.songname}}</span>
+            <span v-if='showRoll'>{{this.songMsg.songname}}</span>
           </div>
           <div class="singer">
             <span>{{this.artists}}</span>
@@ -80,6 +81,7 @@ export default {
   },
   data(){
     return{
+      showRoll: false,
       list: [],
       touch: {
         startProgress: 0,
@@ -151,6 +153,10 @@ export default {
         // console.log(this.songlist);
       }
     },
+    songName(){
+      console.log(this.songName);
+      this.$nextTick(this.roll);
+    },
   },
   methods:{
     ...mapMutations(NameSpace, ['pause', 'pushSonglist', 'pruneCurrentTime','stackSonglist']),
@@ -161,24 +167,30 @@ export default {
     },
     //歌名过长滚动效果
     roll(){
+      //获取dom
       let songName = this.$refs.songName;
       let rollName = this.$refs.rollName;
-      const width = songName.offsetWidth;
-      const _width = rollName.offsetWidth;
+      let width = songName.offsetWidth;
+      let _width = rollName.offsetWidth;
       if (_width > width) {
-        songName.innerHTML += songName.innerHTML;
-        let start = () =>{
+        //如果不是用vue要用inner来增加一个滚动元素
+//        songName.innerHTML += songName.innerHTML;
+        this.showRoll = true;
+        let start = function (){
           if ( _width + 40 - songName.scrollLeft == 0) {
             songName.scrollLeft = 0;
+            //滚动一次后的停留时间
             setTimeout(start,2000);
           } else {
             songName.scrollLeft++;
+            //改变时间调节滚动速度
             setTimeout(start,30);
           }
         }
         setTimeout(start,2000);
       } else {
-        return false;
+        this.showRoll = false;
+        songName.scrollLeft = 0;
       }
     },
     startPrune(e) {
@@ -230,9 +242,14 @@ export default {
       })
     },
   },
-  updated(){
-    this.roll();
-  },
+//  mounted(){
+//
+//    this.$nextTick(this.roll());
+//  },
+//  updated(){
+//    console.log(this.songName);
+//    this.$nextTick(this.roll());
+//  },
   created(){
     this.playSong(0);
   },
@@ -330,7 +347,7 @@ export default {
           width: 3rem;
           height: 3rem;
         }
-        .collectIcon, {
+        .collectIcon {
           height: 1.25rem;
           width: 1.25rem;
         }

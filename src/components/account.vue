@@ -1,4 +1,4 @@
-<template lang="html">
+﻿<template lang="html">
   <div class="">
     <mu-icon-button
     icon="person"
